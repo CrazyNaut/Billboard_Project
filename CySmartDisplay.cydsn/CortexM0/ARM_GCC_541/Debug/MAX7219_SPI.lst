@@ -1,0 +1,1527 @@
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"MAX7219_SPI.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MAX7219_SpiInit,"ax",%progbits
+  20              		.align	2
+  21              		.global	MAX7219_SpiInit
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	MAX7219_SpiInit, %function
+  25              	MAX7219_SpiInit:
+  26              	.LFB2:
+  27              		.file 1 "Generated_Source\\PSoC4\\MAX7219_SPI.c"
+   1:Generated_Source\PSoC4/MAX7219_SPI.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/MAX7219_SPI.c **** * \file MAX7219_SPI.c
+   3:Generated_Source\PSoC4/MAX7219_SPI.c **** * \version 4.0
+   4:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+   5:Generated_Source\PSoC4/MAX7219_SPI.c **** * \brief
+   6:Generated_Source\PSoC4/MAX7219_SPI.c **** *  This file provides the source code to the API for the SCB Component in
+   7:Generated_Source\PSoC4/MAX7219_SPI.c **** *  SPI mode.
+   8:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+   9:Generated_Source\PSoC4/MAX7219_SPI.c **** * Note:
+  10:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+  11:Generated_Source\PSoC4/MAX7219_SPI.c **** *******************************************************************************
+  12:Generated_Source\PSoC4/MAX7219_SPI.c **** * \copyright
+  13:Generated_Source\PSoC4/MAX7219_SPI.c **** * Copyright 2013-2017, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/MAX7219_SPI.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/MAX7219_SPI.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/MAX7219_SPI.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/MAX7219_SPI.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  19:Generated_Source\PSoC4/MAX7219_SPI.c **** #include "MAX7219_PVT.h"
+  20:Generated_Source\PSoC4/MAX7219_SPI.c **** #include "MAX7219_SPI_UART_PVT.h"
+  21:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  22:Generated_Source\PSoC4/MAX7219_SPI.c **** #if(MAX7219_SCB_MODE_UNCONFIG_CONST_CFG)
+  23:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  24:Generated_Source\PSoC4/MAX7219_SPI.c ****     /***************************************
+  25:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  Configuration Structure Initialization
+  26:Generated_Source\PSoC4/MAX7219_SPI.c ****     ***************************************/
+  27:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  28:Generated_Source\PSoC4/MAX7219_SPI.c ****     const MAX7219_SPI_INIT_STRUCT MAX7219_configSpi =
+  29:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+  30:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_MODE,
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 2
+
+
+  31:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_SUB_MODE,
+  32:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_CLOCK_MODE,
+  33:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_OVS_FACTOR,
+  34:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_MEDIAN_FILTER_ENABLE,
+  35:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_LATE_MISO_SAMPLE_ENABLE,
+  36:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_WAKE_ENABLE,
+  37:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_RX_DATA_BITS_NUM,
+  38:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_TX_DATA_BITS_NUM,
+  39:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_BITS_ORDER,
+  40:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_TRANSFER_SEPARATION,
+  41:Generated_Source\PSoC4/MAX7219_SPI.c ****         0u,
+  42:Generated_Source\PSoC4/MAX7219_SPI.c ****         NULL,
+  43:Generated_Source\PSoC4/MAX7219_SPI.c ****         0u,
+  44:Generated_Source\PSoC4/MAX7219_SPI.c ****         NULL,
+  45:Generated_Source\PSoC4/MAX7219_SPI.c ****         (uint32) MAX7219_SCB_IRQ_INTERNAL,
+  46:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_INTR_RX_MASK,
+  47:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_RX_TRIGGER_LEVEL,
+  48:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_INTR_TX_MASK,
+  49:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_TX_TRIGGER_LEVEL,
+  50:Generated_Source\PSoC4/MAX7219_SPI.c ****         (uint8) MAX7219_SPI_BYTE_MODE_ENABLE,
+  51:Generated_Source\PSoC4/MAX7219_SPI.c ****         (uint8) MAX7219_SPI_FREE_RUN_SCLK_ENABLE,
+  52:Generated_Source\PSoC4/MAX7219_SPI.c ****         (uint8) MAX7219_SPI_SS_POLARITY
+  53:Generated_Source\PSoC4/MAX7219_SPI.c ****     };
+  54:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  55:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  56:Generated_Source\PSoC4/MAX7219_SPI.c ****     /*******************************************************************************
+  57:Generated_Source\PSoC4/MAX7219_SPI.c ****     * Function Name: MAX7219_SpiInit
+  58:Generated_Source\PSoC4/MAX7219_SPI.c ****     ****************************************************************************//**
+  59:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+  60:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  Configures the MAX7219 for SPI operation.
+  61:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+  62:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  This function is intended specifically to be used when the MAX7219 
+  63:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  configuration is set to “Unconfigured MAX7219” in the customizer. 
+  64:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  After initializing the MAX7219 in SPI mode using this function, 
+  65:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  the component can be enabled using the MAX7219_Start() or 
+  66:Generated_Source\PSoC4/MAX7219_SPI.c ****     * MAX7219_Enable() function.
+  67:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  This function uses a pointer to a structure that provides the configuration 
+  68:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  settings. This structure contains the same information that would otherwise 
+  69:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  be provided by the customizer settings.
+  70:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+  71:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  \param config: pointer to a structure that contains the following list of 
+  72:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   fields. These fields match the selections available in the customizer. 
+  73:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   Refer to the customizer for further description of the settings.
+  74:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+  75:Generated_Source\PSoC4/MAX7219_SPI.c ****     *******************************************************************************/
+  76:Generated_Source\PSoC4/MAX7219_SPI.c ****     void MAX7219_SpiInit(const MAX7219_SPI_INIT_STRUCT *config)
+  77:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+  78:Generated_Source\PSoC4/MAX7219_SPI.c ****         if(NULL == config)
+  79:Generated_Source\PSoC4/MAX7219_SPI.c ****         {
+  80:Generated_Source\PSoC4/MAX7219_SPI.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  81:Generated_Source\PSoC4/MAX7219_SPI.c ****         }
+  82:Generated_Source\PSoC4/MAX7219_SPI.c ****         else
+  83:Generated_Source\PSoC4/MAX7219_SPI.c ****         {
+  84:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure pins */
+  85:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_SetPins(MAX7219_SCB_MODE_SPI, config->mode, MAX7219_DUMMY_PARAM);
+  86:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  87:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Store internal configuration */
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 3
+
+
+  88:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_scbMode       = (uint8) MAX7219_SCB_MODE_SPI;
+  89:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_scbEnableWake = (uint8) config->enableWake;
+  90:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_scbEnableIntr = (uint8) config->enableInterrupt;
+  91:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  92:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Set RX direction internal variables */
+  93:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxBuffer      =         config->rxBuffer;
+  94:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxDataBits    = (uint8) config->rxDataBits;
+  95:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxBufferSize  =         config->rxBufferSize;
+  96:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+  97:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Set TX direction internal variables */
+  98:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_txBuffer      =         config->txBuffer;
+  99:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_txDataBits    = (uint8) config->txDataBits;
+ 100:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_txBufferSize  =         config->txBufferSize;
+ 101:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 102:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure SPI interface */
+ 103:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_CTRL_REG     = MAX7219_GET_CTRL_OVS(config->oversample)           |
+ 104:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_CTRL_BYTE_MODE(config->enableByteMode) |
+ 105:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_CTRL_EC_AM_MODE(config->enableWake)    |
+ 106:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_CTRL_SPI;
+ 107:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 108:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_SPI_CTRL_REG = MAX7219_GET_SPI_CTRL_CONTINUOUS    (config->transferSeperation) 
+ 109:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_SELECT_PRECEDE(config->submode &
+ 110:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                                           MAX7219_SPI_MODE_TI_PRECE
+ 111:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_SCLK_MODE     (config->sclkMode)  
+ 112:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_LATE_MISO_SAMPLE(config->enableLat
+ 113:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_SCLK_CONTINUOUS(config->enableFree
+ 114:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_SSEL_POLARITY (config->polaritySs)
+ 115:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_SUB_MODE      (config->submode)   
+ 116:Generated_Source\PSoC4/MAX7219_SPI.c ****                                             MAX7219_GET_SPI_CTRL_MASTER_MODE   (config->mode);
+ 117:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 118:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure RX direction */
+ 119:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_RX_CTRL_REG     =  MAX7219_GET_RX_CTRL_DATA_WIDTH(config->rxDataBits)         |
+ 120:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                 MAX7219_GET_RX_CTRL_BIT_ORDER (config->bitOrder)   
+ 121:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                 MAX7219_GET_RX_CTRL_MEDIAN    (config->enableMedian
+ 122:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                 MAX7219_SPI_RX_CTRL;
+ 123:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 124:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_RX_FIFO_CTRL_REG = MAX7219_GET_RX_FIFO_CTRL_TRIGGER_LEVEL(config->rxTriggerLeve
+ 125:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 126:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure TX direction */
+ 127:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_TX_CTRL_REG      = MAX7219_GET_TX_CTRL_DATA_WIDTH(config->txDataBits) |
+ 128:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                 MAX7219_GET_TX_CTRL_BIT_ORDER (config->bitOrder)   
+ 129:Generated_Source\PSoC4/MAX7219_SPI.c ****                                                 MAX7219_SPI_TX_CTRL;
+ 130:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 131:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_TX_FIFO_CTRL_REG = MAX7219_GET_TX_FIFO_CTRL_TRIGGER_LEVEL(config->txTriggerLeve
+ 132:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 133:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure interrupt with SPI handler but do not enable it */
+ 134:Generated_Source\PSoC4/MAX7219_SPI.c ****             CyIntDisable    (MAX7219_ISR_NUMBER);
+ 135:Generated_Source\PSoC4/MAX7219_SPI.c ****             CyIntSetPriority(MAX7219_ISR_NUMBER, MAX7219_ISR_PRIORITY);
+ 136:Generated_Source\PSoC4/MAX7219_SPI.c ****             (void) CyIntSetVector(MAX7219_ISR_NUMBER, &MAX7219_SPI_UART_ISR);
+ 137:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 138:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure interrupt sources */
+ 139:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_I2C_EC_MASK_REG = MAX7219_NO_INTR_SOURCES;
+ 140:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_SPI_EC_MASK_REG = MAX7219_NO_INTR_SOURCES;
+ 141:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_SLAVE_MASK_REG  = MAX7219_GET_SPI_INTR_SLAVE_MASK(config->rxInterruptMask)
+ 142:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_MASTER_MASK_REG = MAX7219_GET_SPI_INTR_MASTER_MASK(config->txInterruptMask
+ 143:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_RX_MASK_REG     = MAX7219_GET_SPI_INTR_RX_MASK(config->rxInterruptMask);
+ 144:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_INTR_TX_MASK_REG     = MAX7219_GET_SPI_INTR_TX_MASK(config->txInterruptMask);
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 4
+
+
+ 145:Generated_Source\PSoC4/MAX7219_SPI.c ****             
+ 146:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Configure TX interrupt sources to restore. */
+ 147:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_IntrTxMask = LO16(MAX7219_INTR_TX_MASK_REG);
+ 148:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 149:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Set active SS0 */
+ 150:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_SpiSetActiveSlaveSelect(MAX7219_SPI_SLAVE_SELECT0);
+ 151:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 152:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Clear RX buffer indexes */
+ 153:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxBufferHead     = 0u;
+ 154:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxBufferTail     = 0u;
+ 155:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_rxBufferOverflow = 0u;
+ 156:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 157:Generated_Source\PSoC4/MAX7219_SPI.c ****             /* Clear TX buffer indexes */
+ 158:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_txBufferHead = 0u;
+ 159:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_txBufferTail = 0u;
+ 160:Generated_Source\PSoC4/MAX7219_SPI.c ****         }
+ 161:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 162:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 163:Generated_Source\PSoC4/MAX7219_SPI.c **** #else
+ 164:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 165:Generated_Source\PSoC4/MAX7219_SPI.c ****     /*******************************************************************************
+ 166:Generated_Source\PSoC4/MAX7219_SPI.c ****     * Function Name: MAX7219_SpiInit
+ 167:Generated_Source\PSoC4/MAX7219_SPI.c ****     ****************************************************************************//**
+ 168:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 169:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  Configures the SCB for the SPI operation.
+ 170:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 171:Generated_Source\PSoC4/MAX7219_SPI.c ****     *******************************************************************************/
+ 172:Generated_Source\PSoC4/MAX7219_SPI.c ****     void MAX7219_SpiInit(void)
+ 173:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+  28              		.loc 1 173 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 80B5     		push	{r7, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
+ 174:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure SPI interface */
+ 175:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_CTRL_REG     = MAX7219_SPI_DEFAULT_CTRL;
+  38              		.loc 1 175 0
+  39 0004 174B     		ldr	r3, .L2
+  40 0006 184A     		ldr	r2, .L2+4
+  41 0008 1A60     		str	r2, [r3]
+ 176:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_CTRL_REG = MAX7219_SPI_DEFAULT_SPI_CTRL;
+  42              		.loc 1 176 0
+  43 000a 184B     		ldr	r3, .L2+8
+  44 000c 184A     		ldr	r2, .L2+12
+  45 000e 1A60     		str	r2, [r3]
+ 177:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 178:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure TX and RX direction */
+ 179:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_RX_CTRL_REG      = MAX7219_SPI_DEFAULT_RX_CTRL;
+  46              		.loc 1 179 0
+  47 0010 184B     		ldr	r3, .L2+16
+  48 0012 194A     		ldr	r2, .L2+20
+  49 0014 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 5
+
+
+ 180:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_RX_FIFO_CTRL_REG = MAX7219_SPI_DEFAULT_RX_FIFO_CTRL;
+  50              		.loc 1 180 0
+  51 0016 194B     		ldr	r3, .L2+24
+  52 0018 0722     		movs	r2, #7
+  53 001a 1A60     		str	r2, [r3]
+ 181:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 182:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure TX and RX direction */
+ 183:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_TX_CTRL_REG      = MAX7219_SPI_DEFAULT_TX_CTRL;
+  54              		.loc 1 183 0
+  55 001c 184B     		ldr	r3, .L2+28
+  56 001e 164A     		ldr	r2, .L2+20
+  57 0020 1A60     		str	r2, [r3]
+ 184:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_TX_FIFO_CTRL_REG = MAX7219_SPI_DEFAULT_TX_FIFO_CTRL;
+  58              		.loc 1 184 0
+  59 0022 184B     		ldr	r3, .L2+32
+  60 0024 0022     		movs	r2, #0
+  61 0026 1A60     		str	r2, [r3]
+ 185:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 186:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure interrupt with SPI handler but do not enable it */
+ 187:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if(MAX7219_SCB_IRQ_INTERNAL)
+ 188:Generated_Source\PSoC4/MAX7219_SPI.c ****             CyIntDisable    (MAX7219_ISR_NUMBER);
+ 189:Generated_Source\PSoC4/MAX7219_SPI.c ****             CyIntSetPriority(MAX7219_ISR_NUMBER, MAX7219_ISR_PRIORITY);
+ 190:Generated_Source\PSoC4/MAX7219_SPI.c ****             (void) CyIntSetVector(MAX7219_ISR_NUMBER, &MAX7219_SPI_UART_ISR);
+ 191:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SCB_IRQ_INTERNAL) */
+ 192:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 193:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure interrupt sources */
+ 194:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_I2C_EC_MASK_REG = MAX7219_SPI_DEFAULT_INTR_I2C_EC_MASK;
+  62              		.loc 1 194 0
+  63 0028 174B     		ldr	r3, .L2+36
+  64 002a 0022     		movs	r2, #0
+  65 002c 1A60     		str	r2, [r3]
+ 195:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_SPI_EC_MASK_REG = MAX7219_SPI_DEFAULT_INTR_SPI_EC_MASK;
+  66              		.loc 1 195 0
+  67 002e 174B     		ldr	r3, .L2+40
+  68 0030 0022     		movs	r2, #0
+  69 0032 1A60     		str	r2, [r3]
+ 196:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_SLAVE_MASK_REG  = MAX7219_SPI_DEFAULT_INTR_SLAVE_MASK;
+  70              		.loc 1 196 0
+  71 0034 164B     		ldr	r3, .L2+44
+  72 0036 0022     		movs	r2, #0
+  73 0038 1A60     		str	r2, [r3]
+ 197:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_MASTER_MASK_REG = MAX7219_SPI_DEFAULT_INTR_MASTER_MASK;
+  74              		.loc 1 197 0
+  75 003a 164B     		ldr	r3, .L2+48
+  76 003c 0022     		movs	r2, #0
+  77 003e 1A60     		str	r2, [r3]
+ 198:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_RX_MASK_REG     = MAX7219_SPI_DEFAULT_INTR_RX_MASK;
+  78              		.loc 1 198 0
+  79 0040 154B     		ldr	r3, .L2+52
+  80 0042 0022     		movs	r2, #0
+  81 0044 1A60     		str	r2, [r3]
+ 199:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_INTR_TX_MASK_REG     = MAX7219_SPI_DEFAULT_INTR_TX_MASK;
+  82              		.loc 1 199 0
+  83 0046 154B     		ldr	r3, .L2+56
+  84 0048 0022     		movs	r2, #0
+  85 004a 1A60     		str	r2, [r3]
+ 200:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 6
+
+
+ 201:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Configure TX interrupt sources to restore. */
+ 202:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_IntrTxMask = LO16(MAX7219_INTR_TX_MASK_REG);
+  86              		.loc 1 202 0
+  87 004c 134B     		ldr	r3, .L2+56
+  88 004e 1B68     		ldr	r3, [r3]
+  89 0050 9AB2     		uxth	r2, r3
+  90 0052 134B     		ldr	r3, .L2+60
+  91 0054 1A80     		strh	r2, [r3]
+ 203:Generated_Source\PSoC4/MAX7219_SPI.c ****             
+ 204:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set active SS0 for master */
+ 205:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_CONST)
+ 206:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SpiSetActiveSlaveSelect(MAX7219_SPI_SLAVE_SELECT0);
+  92              		.loc 1 206 0
+  93 0056 0020     		movs	r0, #0
+  94 0058 FFF7FEFF 		bl	MAX7219_SpiSetActiveSlaveSelect
+ 207:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_CONST) */
+ 208:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 209:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if(MAX7219_INTERNAL_RX_SW_BUFFER_CONST)
+ 210:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_rxBufferHead     = 0u;
+ 211:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_rxBufferTail     = 0u;
+ 212:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_rxBufferOverflow = 0u;
+ 213:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_INTERNAL_RX_SW_BUFFER_CONST) */
+ 214:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 215:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if(MAX7219_INTERNAL_TX_SW_BUFFER_CONST)
+ 216:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_txBufferHead = 0u;
+ 217:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_txBufferTail = 0u;
+ 218:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_INTERNAL_TX_SW_BUFFER_CONST) */
+ 219:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+  95              		.loc 1 219 0
+  96 005c C046     		nop
+  97 005e BD46     		mov	sp, r7
+  98              		@ sp needed
+  99 0060 80BD     		pop	{r7, pc}
+ 100              	.L3:
+ 101 0062 C046     		.align	2
+ 102              	.L2:
+ 103 0064 00002540 		.word	1076166656
+ 104 0068 0F000001 		.word	16777231
+ 105 006c 20002540 		.word	1076166688
+ 106 0070 01000080 		.word	-2147483647
+ 107 0074 00032540 		.word	1076167424
+ 108 0078 07010080 		.word	-2147483385
+ 109 007c 04032540 		.word	1076167428
+ 110 0080 00022540 		.word	1076167168
+ 111 0084 04022540 		.word	1076167172
+ 112 0088 880E2540 		.word	1076170376
+ 113 008c C80E2540 		.word	1076170440
+ 114 0090 480F2540 		.word	1076170568
+ 115 0094 080F2540 		.word	1076170504
+ 116 0098 C80F2540 		.word	1076170696
+ 117 009c 880F2540 		.word	1076170632
+ 118 00a0 00000000 		.word	MAX7219_IntrTxMask
+ 119              		.cfi_endproc
+ 120              	.LFE2:
+ 121              		.size	MAX7219_SpiInit, .-MAX7219_SpiInit
+ 122              		.section	.text.MAX7219_SpiPostEnable,"ax",%progbits
+ 123              		.align	2
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 7
+
+
+ 124              		.global	MAX7219_SpiPostEnable
+ 125              		.code	16
+ 126              		.thumb_func
+ 127              		.type	MAX7219_SpiPostEnable, %function
+ 128              	MAX7219_SpiPostEnable:
+ 129              	.LFB3:
+ 220:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 221:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 222:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 223:Generated_Source\PSoC4/MAX7219_SPI.c **** /*******************************************************************************
+ 224:Generated_Source\PSoC4/MAX7219_SPI.c **** * Function Name: MAX7219_SpiPostEnable
+ 225:Generated_Source\PSoC4/MAX7219_SPI.c **** ****************************************************************************//**
+ 226:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+ 227:Generated_Source\PSoC4/MAX7219_SPI.c **** *  Restores HSIOM settings for the SPI master output pins (SCLK and/or SS0-SS3) 
+ 228:Generated_Source\PSoC4/MAX7219_SPI.c **** *  to be controlled by the SCB SPI.
+ 229:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+ 230:Generated_Source\PSoC4/MAX7219_SPI.c **** *******************************************************************************/
+ 231:Generated_Source\PSoC4/MAX7219_SPI.c **** void MAX7219_SpiPostEnable(void)
+ 232:Generated_Source\PSoC4/MAX7219_SPI.c **** {
+ 130              		.loc 1 232 0
+ 131              		.cfi_startproc
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 1, uses_anonymous_args = 0
+ 134 0000 80B5     		push	{r7, lr}
+ 135              		.cfi_def_cfa_offset 8
+ 136              		.cfi_offset 7, -8
+ 137              		.cfi_offset 14, -4
+ 138 0002 00AF     		add	r7, sp, #0
+ 139              		.cfi_def_cfa_register 7
+ 233:Generated_Source\PSoC4/MAX7219_SPI.c **** #if(MAX7219_SCB_MODE_UNCONFIG_CONST_CFG)
+ 234:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 235:Generated_Source\PSoC4/MAX7219_SPI.c ****     if (MAX7219_CHECK_SPI_MASTER)
+ 236:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+ 237:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_CTS_SCLK_PIN)
+ 238:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 239:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_CTS_SCLK_HSIOM_REG, MAX7219_CTS_SCLK_HSIOM_MASK,
+ 240:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_CTS_SCLK_HSIOM_POS, MAX7219_CTS_SCLK_HSIOM_SEL_SPI);
+ 241:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_CTS_SCLK_PIN) */
+ 242:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 243:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_RTS_SS0_PIN)
+ 244:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 245:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_RTS_SS0_HSIOM_REG, MAX7219_RTS_SS0_HSIOM_MASK,
+ 246:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_RTS_SS0_HSIOM_POS, MAX7219_RTS_SS0_HSIOM_SEL_SPI);
+ 247:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_RTS_SS0_PIN) */
+ 248:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 249:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS1_PIN)
+ 250:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 251:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS1_HSIOM_REG, MAX7219_SS1_HSIOM_MASK,
+ 252:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS1_HSIOM_POS, MAX7219_SS1_HSIOM_SEL_SPI);
+ 253:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS1_PIN) */
+ 254:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 255:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS2_PIN)
+ 256:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 257:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS2_HSIOM_REG, MAX7219_SS2_HSIOM_MASK,
+ 258:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS2_HSIOM_POS, MAX7219_SS2_HSIOM_SEL_SPI);
+ 259:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS2_PIN) */
+ 260:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 8
+
+
+ 261:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS3_PIN)
+ 262:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 263:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS3_HSIOM_REG, MAX7219_SS3_HSIOM_MASK,
+ 264:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS3_HSIOM_POS, MAX7219_SS3_HSIOM_SEL_SPI);
+ 265:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS3_PIN) */
+ 266:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 267:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 268:Generated_Source\PSoC4/MAX7219_SPI.c **** #else
+ 269:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 270:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_SCLK_PIN)
+ 271:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 272:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SCLK_M_HSIOM_REG, MAX7219_SCLK_M_HSIOM_MASK,
+ 140              		.loc 1 272 0
+ 141 0004 064B     		ldr	r3, .L5
+ 142 0006 064A     		ldr	r2, .L5
+ 143 0008 1268     		ldr	r2, [r2]
+ 144 000a F021     		movs	r1, #240
+ 145 000c 0902     		lsls	r1, r1, #8
+ 146 000e 0A43     		orrs	r2, r1
+ 147 0010 1A60     		str	r2, [r3]
+ 273:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SCLK_M_HSIOM_POS, MAX7219_SCLK_M_HSIOM_SEL_SPI);
+ 274:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_MISO_SDA_TX_PIN_PIN) */
+ 275:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 276:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_SS0_PIN)
+ 277:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 278:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS0_M_HSIOM_REG, MAX7219_SS0_M_HSIOM_MASK,
+ 279:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS0_M_HSIOM_POS, MAX7219_SS0_M_HSIOM_SEL_SPI);
+ 280:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_SS0_PIN) */
+ 281:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 282:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_SS1_PIN)
+ 283:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 284:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS1_M_HSIOM_REG, MAX7219_SS1_M_HSIOM_MASK,
+ 285:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS1_M_HSIOM_POS, MAX7219_SS1_M_HSIOM_SEL_SPI);
+ 286:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_SS1_PIN) */
+ 287:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 288:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_SS2_PIN)
+ 289:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 290:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS2_M_HSIOM_REG, MAX7219_SS2_M_HSIOM_MASK,
+ 291:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS2_M_HSIOM_POS, MAX7219_SS2_M_HSIOM_SEL_SPI);
+ 292:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_SS2_PIN) */
+ 293:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 294:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_SS3_PIN)
+ 295:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 296:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS3_M_HSIOM_REG, MAX7219_SS3_M_HSIOM_MASK,
+ 297:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS3_M_HSIOM_POS, MAX7219_SS3_M_HSIOM_SEL_SPI);
+ 298:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_SS3_PIN) */
+ 299:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 300:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 301:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 302:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Restore TX interrupt sources. */
+ 303:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SetTxInterruptMode(MAX7219_IntrTxMask);
+ 148              		.loc 1 303 0
+ 149 0012 044B     		ldr	r3, .L5+4
+ 150 0014 044A     		ldr	r2, .L5+8
+ 151 0016 1288     		ldrh	r2, [r2]
+ 152 0018 1A60     		str	r2, [r3]
+ 304:Generated_Source\PSoC4/MAX7219_SPI.c **** }
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 9
+
+
+ 153              		.loc 1 304 0
+ 154 001a C046     		nop
+ 155 001c BD46     		mov	sp, r7
+ 156              		@ sp needed
+ 157 001e 80BD     		pop	{r7, pc}
+ 158              	.L6:
+ 159              		.align	2
+ 160              	.L5:
+ 161 0020 00000240 		.word	1073872896
+ 162 0024 880F2540 		.word	1076170632
+ 163 0028 00000000 		.word	MAX7219_IntrTxMask
+ 164              		.cfi_endproc
+ 165              	.LFE3:
+ 166              		.size	MAX7219_SpiPostEnable, .-MAX7219_SpiPostEnable
+ 167              		.section	.text.MAX7219_SpiStop,"ax",%progbits
+ 168              		.align	2
+ 169              		.global	MAX7219_SpiStop
+ 170              		.code	16
+ 171              		.thumb_func
+ 172              		.type	MAX7219_SpiStop, %function
+ 173              	MAX7219_SpiStop:
+ 174              	.LFB4:
+ 305:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 306:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 307:Generated_Source\PSoC4/MAX7219_SPI.c **** /*******************************************************************************
+ 308:Generated_Source\PSoC4/MAX7219_SPI.c **** * Function Name: MAX7219_SpiStop
+ 309:Generated_Source\PSoC4/MAX7219_SPI.c **** ****************************************************************************//**
+ 310:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+ 311:Generated_Source\PSoC4/MAX7219_SPI.c **** *  Changes the HSIOM settings for the SPI master output pins 
+ 312:Generated_Source\PSoC4/MAX7219_SPI.c **** *  (SCLK and/or SS0-SS3) to keep them inactive after the block is disabled. 
+ 313:Generated_Source\PSoC4/MAX7219_SPI.c **** *  The output pins are controlled by the GPIO data register.
+ 314:Generated_Source\PSoC4/MAX7219_SPI.c **** *
+ 315:Generated_Source\PSoC4/MAX7219_SPI.c **** *******************************************************************************/
+ 316:Generated_Source\PSoC4/MAX7219_SPI.c **** void MAX7219_SpiStop(void)
+ 317:Generated_Source\PSoC4/MAX7219_SPI.c **** {
+ 175              		.loc 1 317 0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 1, uses_anonymous_args = 0
+ 179 0000 80B5     		push	{r7, lr}
+ 180              		.cfi_def_cfa_offset 8
+ 181              		.cfi_offset 7, -8
+ 182              		.cfi_offset 14, -4
+ 183 0002 00AF     		add	r7, sp, #0
+ 184              		.cfi_def_cfa_register 7
+ 318:Generated_Source\PSoC4/MAX7219_SPI.c **** #if(MAX7219_SCB_MODE_UNCONFIG_CONST_CFG)
+ 319:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 320:Generated_Source\PSoC4/MAX7219_SPI.c ****     if (MAX7219_CHECK_SPI_MASTER)
+ 321:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+ 322:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_CTS_SCLK_PIN)
+ 323:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set output pin state after block is disabled */
+ 324:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_uart_cts_spi_sclk_Write(MAX7219_GET_SPI_SCLK_INACTIVE);
+ 325:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 326:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set GPIO to drive output pin */
+ 327:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_CTS_SCLK_HSIOM_REG, MAX7219_CTS_SCLK_HSIOM_MASK,
+ 328:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_CTS_SCLK_HSIOM_POS, MAX7219_CTS_SCLK_HSIOM_SEL_GPIO)
+ 329:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_uart_cts_spi_sclk_PIN) */
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 10
+
+
+ 330:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 331:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_RTS_SS0_PIN)
+ 332:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set output pin state after block is disabled */
+ 333:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_uart_rts_spi_ss0_Write(MAX7219_GET_SPI_SS0_INACTIVE);
+ 334:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 335:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set GPIO to drive output pin */
+ 336:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_RTS_SS0_HSIOM_REG, MAX7219_RTS_SS0_HSIOM_MASK,
+ 337:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_RTS_SS0_HSIOM_POS, MAX7219_RTS_SS0_HSIOM_SEL_GPIO);
+ 338:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_uart_rts_spi_ss0_PIN) */
+ 339:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 340:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS1_PIN)
+ 341:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set output pin state after block is disabled */
+ 342:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_spi_ss1_Write(MAX7219_GET_SPI_SS1_INACTIVE);
+ 343:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 344:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set GPIO to drive output pin */
+ 345:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS1_HSIOM_REG, MAX7219_SS1_HSIOM_MASK,
+ 346:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS1_HSIOM_POS, MAX7219_SS1_HSIOM_SEL_GPIO);
+ 347:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS1_PIN) */
+ 348:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 349:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS2_PIN)
+ 350:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set output pin state after block is disabled */
+ 351:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_spi_ss2_Write(MAX7219_GET_SPI_SS2_INACTIVE);
+ 352:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 353:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set GPIO to drive output pin */
+ 354:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS2_HSIOM_REG, MAX7219_SS2_HSIOM_MASK,
+ 355:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS2_HSIOM_POS, MAX7219_SS2_HSIOM_SEL_GPIO);
+ 356:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS2_PIN) */
+ 357:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 358:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SS3_PIN)
+ 359:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set output pin state after block is disabled */
+ 360:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_spi_ss3_Write(MAX7219_GET_SPI_SS3_INACTIVE);
+ 361:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 362:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Set GPIO to drive output pin */
+ 363:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SET_HSIOM_SEL(MAX7219_SS3_HSIOM_REG, MAX7219_SS3_HSIOM_MASK,
+ 364:Generated_Source\PSoC4/MAX7219_SPI.c ****                                        MAX7219_SS3_HSIOM_POS, MAX7219_SS3_HSIOM_SEL_GPIO);
+ 365:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SS3_PIN) */
+ 366:Generated_Source\PSoC4/MAX7219_SPI.c ****     
+ 367:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Store TX interrupt sources (exclude level triggered) for master. */
+ 368:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_IntrTxMask = LO16(MAX7219_GetTxInterruptMode() & MAX7219_INTR_SPIM_TX_RESTORE);
+ 369:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 370:Generated_Source\PSoC4/MAX7219_SPI.c ****     else
+ 371:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+ 372:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Store TX interrupt sources (exclude level triggered) for slave. */
+ 373:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_IntrTxMask = LO16(MAX7219_GetTxInterruptMode() & MAX7219_INTR_SPIS_TX_RESTORE);
+ 374:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 375:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 376:Generated_Source\PSoC4/MAX7219_SPI.c **** #else
+ 377:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 378:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_SCLK_PIN)
+ 379:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set output pin state after block is disabled */
+ 380:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_sclk_m_Write(MAX7219_GET_SPI_SCLK_INACTIVE);
+ 185              		.loc 1 380 0
+ 186 0004 0D4B     		ldr	r3, .L8
+ 187 0006 1B68     		ldr	r3, [r3]
+ 188 0008 0822     		movs	r2, #8
+ 189 000a 1340     		ands	r3, r2
+ 190 000c 5A1E     		subs	r2, r3, #1
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 11
+
+
+ 191 000e 9341     		sbcs	r3, r3, r2
+ 192 0010 DBB2     		uxtb	r3, r3
+ 193 0012 1800     		movs	r0, r3
+ 194 0014 FFF7FEFF 		bl	MAX7219_sclk_m_Write
+ 381:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 382:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set GPIO to drive output pin */
+ 383:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SET_HSIOM_SEL(MAX7219_SCLK_M_HSIOM_REG, MAX7219_SCLK_M_HSIOM_MASK,
+ 195              		.loc 1 383 0
+ 196 0018 094B     		ldr	r3, .L8+4
+ 197 001a 094A     		ldr	r2, .L8+4
+ 198 001c 1268     		ldr	r2, [r2]
+ 199 001e 0949     		ldr	r1, .L8+8
+ 200 0020 0A40     		ands	r2, r1
+ 201 0022 1A60     		str	r2, [r3]
+ 384:Generated_Source\PSoC4/MAX7219_SPI.c ****                                    MAX7219_SCLK_M_HSIOM_POS, MAX7219_SCLK_M_HSIOM_SEL_GPIO);
+ 385:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_MISO_SDA_TX_PIN_PIN) */
+ 386:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 387:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_SS0_PIN)
+ 388:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set output pin state after block is disabled */
+ 389:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_ss0_m_Write(MAX7219_GET_SPI_SS0_INACTIVE);
+ 390:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 391:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set GPIO to drive output pin */
+ 392:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SET_HSIOM_SEL(MAX7219_SS0_M_HSIOM_REG, MAX7219_SS0_M_HSIOM_MASK,
+ 393:Generated_Source\PSoC4/MAX7219_SPI.c ****                                    MAX7219_SS0_M_HSIOM_POS, MAX7219_SS0_M_HSIOM_SEL_GPIO);
+ 394:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SPI_MASTER_SS0_PIN) */
+ 395:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 396:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_SS1_PIN)
+ 397:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set output pin state after block is disabled */
+ 398:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_ss1_m_Write(MAX7219_GET_SPI_SS1_INACTIVE);
+ 399:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 400:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set GPIO to drive output pin */
+ 401:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SET_HSIOM_SEL(MAX7219_SS1_M_HSIOM_REG, MAX7219_SS1_M_HSIOM_MASK,
+ 402:Generated_Source\PSoC4/MAX7219_SPI.c ****                                    MAX7219_SS1_M_HSIOM_POS, MAX7219_SS1_M_HSIOM_SEL_GPIO);
+ 403:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SPI_MASTER_SS1_PIN) */
+ 404:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 405:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_SS2_PIN)
+ 406:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set output pin state after block is disabled */
+ 407:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_ss2_m_Write(MAX7219_GET_SPI_SS2_INACTIVE);
+ 408:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 409:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set GPIO to drive output pin */
+ 410:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SET_HSIOM_SEL(MAX7219_SS2_M_HSIOM_REG, MAX7219_SS2_M_HSIOM_MASK,
+ 411:Generated_Source\PSoC4/MAX7219_SPI.c ****                                    MAX7219_SS2_M_HSIOM_POS, MAX7219_SS2_M_HSIOM_SEL_GPIO);
+ 412:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SPI_MASTER_SS2_PIN) */
+ 413:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 414:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_SS3_PIN)
+ 415:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set output pin state after block is disabled */
+ 416:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_ss3_m_Write(MAX7219_GET_SPI_SS3_INACTIVE);
+ 417:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 418:Generated_Source\PSoC4/MAX7219_SPI.c ****     /* Set GPIO to drive output pin */
+ 419:Generated_Source\PSoC4/MAX7219_SPI.c ****     MAX7219_SET_HSIOM_SEL(MAX7219_SS3_M_HSIOM_REG, MAX7219_SS3_M_HSIOM_MASK,
+ 420:Generated_Source\PSoC4/MAX7219_SPI.c ****                                    MAX7219_SS3_M_HSIOM_POS, MAX7219_SS3_M_HSIOM_SEL_GPIO);
+ 421:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SPI_MASTER_SS3_PIN) */
+ 422:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 423:Generated_Source\PSoC4/MAX7219_SPI.c ****     #if (MAX7219_SPI_MASTER_CONST)
+ 424:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Store TX interrupt sources (exclude level triggered). */
+ 425:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_IntrTxMask = LO16(MAX7219_GetTxInterruptMode() & MAX7219_INTR_SPIM_TX_RESTORE);
+ 202              		.loc 1 425 0
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 12
+
+
+ 203 0024 084B     		ldr	r3, .L8+12
+ 204 0026 1B68     		ldr	r3, [r3]
+ 205 0028 9BB2     		uxth	r3, r3
+ 206 002a 2022     		movs	r2, #32
+ 207 002c 1340     		ands	r3, r2
+ 208 002e 9AB2     		uxth	r2, r3
+ 209 0030 064B     		ldr	r3, .L8+16
+ 210 0032 1A80     		strh	r2, [r3]
+ 426:Generated_Source\PSoC4/MAX7219_SPI.c ****     #else
+ 427:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Store TX interrupt sources (exclude level triggered). */
+ 428:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_IntrTxMask = LO16(MAX7219_GetTxInterruptMode() & MAX7219_INTR_SPIS_TX_RESTORE);
+ 429:Generated_Source\PSoC4/MAX7219_SPI.c ****     #endif /* (MAX7219_SPI_MASTER_CONST) */
+ 430:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 431:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 432:Generated_Source\PSoC4/MAX7219_SPI.c **** }
+ 211              		.loc 1 432 0
+ 212 0034 C046     		nop
+ 213 0036 BD46     		mov	sp, r7
+ 214              		@ sp needed
+ 215 0038 80BD     		pop	{r7, pc}
+ 216              	.L9:
+ 217 003a C046     		.align	2
+ 218              	.L8:
+ 219 003c 20002540 		.word	1076166688
+ 220 0040 00000240 		.word	1073872896
+ 221 0044 FF0FFFFF 		.word	-61441
+ 222 0048 880F2540 		.word	1076170632
+ 223 004c 00000000 		.word	MAX7219_IntrTxMask
+ 224              		.cfi_endproc
+ 225              	.LFE4:
+ 226              		.size	MAX7219_SpiStop, .-MAX7219_SpiStop
+ 227              		.section	.text.MAX7219_SpiSetActiveSlaveSelect,"ax",%progbits
+ 228              		.align	2
+ 229              		.global	MAX7219_SpiSetActiveSlaveSelect
+ 230              		.code	16
+ 231              		.thumb_func
+ 232              		.type	MAX7219_SpiSetActiveSlaveSelect, %function
+ 233              	MAX7219_SpiSetActiveSlaveSelect:
+ 234              	.LFB5:
+ 433:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 434:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 435:Generated_Source\PSoC4/MAX7219_SPI.c **** #if (MAX7219_SPI_MASTER_CONST)
+ 436:Generated_Source\PSoC4/MAX7219_SPI.c ****     /*******************************************************************************
+ 437:Generated_Source\PSoC4/MAX7219_SPI.c ****     * Function Name: MAX7219_SetActiveSlaveSelect
+ 438:Generated_Source\PSoC4/MAX7219_SPI.c ****     ****************************************************************************//**
+ 439:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 440:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  Selects one of the four slave select lines to be active during the transfer.
+ 441:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  After initialization the active slave select line is 0.
+ 442:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  The component should be in one of the following states to change the active
+ 443:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  slave select signal source correctly:
+ 444:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - The component is disabled.
+ 445:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - The component has completed transfer (TX FIFO is empty and the
+ 446:Generated_Source\PSoC4/MAX7219_SPI.c ****     *     SCB_INTR_MASTER_SPI_DONE status is set).
+ 447:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 448:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  This function does not check that these conditions are met.
+ 449:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  This function is only applicable to SPI Master mode of operation.
+ 450:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 13
+
+
+ 451:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  \param slaveSelect: slave select line which will be active while the following
+ 452:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   transfer.
+ 453:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT0 - Slave select 0.
+ 454:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT1 - Slave select 1.
+ 455:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT2 - Slave select 2.
+ 456:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT3 - Slave select 3.
+ 457:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 458:Generated_Source\PSoC4/MAX7219_SPI.c ****     *******************************************************************************/
+ 459:Generated_Source\PSoC4/MAX7219_SPI.c ****     void MAX7219_SpiSetActiveSlaveSelect(uint32 slaveSelect)
+ 460:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+ 235              		.loc 1 460 0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 16
+ 238              		@ frame_needed = 1, uses_anonymous_args = 0
+ 239 0000 80B5     		push	{r7, lr}
+ 240              		.cfi_def_cfa_offset 8
+ 241              		.cfi_offset 7, -8
+ 242              		.cfi_offset 14, -4
+ 243 0002 84B0     		sub	sp, sp, #16
+ 244              		.cfi_def_cfa_offset 24
+ 245 0004 00AF     		add	r7, sp, #0
+ 246              		.cfi_def_cfa_register 7
+ 247 0006 7860     		str	r0, [r7, #4]
+ 461:Generated_Source\PSoC4/MAX7219_SPI.c ****         uint32 spiCtrl;
+ 462:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 463:Generated_Source\PSoC4/MAX7219_SPI.c ****         spiCtrl = MAX7219_SPI_CTRL_REG;
+ 248              		.loc 1 463 0
+ 249 0008 0A4B     		ldr	r3, .L11
+ 250 000a 1B68     		ldr	r3, [r3]
+ 251 000c FB60     		str	r3, [r7, #12]
+ 464:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 465:Generated_Source\PSoC4/MAX7219_SPI.c ****         spiCtrl &= (uint32) ~MAX7219_SPI_CTRL_SLAVE_SELECT_MASK;
+ 252              		.loc 1 465 0
+ 253 000e FB68     		ldr	r3, [r7, #12]
+ 254 0010 094A     		ldr	r2, .L11+4
+ 255 0012 1340     		ands	r3, r2
+ 256 0014 FB60     		str	r3, [r7, #12]
+ 466:Generated_Source\PSoC4/MAX7219_SPI.c ****         spiCtrl |= (uint32)  MAX7219_GET_SPI_CTRL_SS(slaveSelect);
+ 257              		.loc 1 466 0
+ 258 0016 7B68     		ldr	r3, [r7, #4]
+ 259 0018 9A06     		lsls	r2, r3, #26
+ 260 001a C023     		movs	r3, #192
+ 261 001c 1B05     		lsls	r3, r3, #20
+ 262 001e 1340     		ands	r3, r2
+ 263 0020 FA68     		ldr	r2, [r7, #12]
+ 264 0022 1343     		orrs	r3, r2
+ 265 0024 FB60     		str	r3, [r7, #12]
+ 467:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 468:Generated_Source\PSoC4/MAX7219_SPI.c ****         MAX7219_SPI_CTRL_REG = spiCtrl;
+ 266              		.loc 1 468 0
+ 267 0026 034B     		ldr	r3, .L11
+ 268 0028 FA68     		ldr	r2, [r7, #12]
+ 269 002a 1A60     		str	r2, [r3]
+ 469:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 270              		.loc 1 469 0
+ 271 002c C046     		nop
+ 272 002e BD46     		mov	sp, r7
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 14
+
+
+ 273 0030 04B0     		add	sp, sp, #16
+ 274              		@ sp needed
+ 275 0032 80BD     		pop	{r7, pc}
+ 276              	.L12:
+ 277              		.align	2
+ 278              	.L11:
+ 279 0034 20002540 		.word	1076166688
+ 280 0038 FFFFFFF3 		.word	-201326593
+ 281              		.cfi_endproc
+ 282              	.LFE5:
+ 283              		.size	MAX7219_SpiSetActiveSlaveSelect, .-MAX7219_SpiSetActiveSlaveSelect
+ 284              		.section	.text.MAX7219_SpiSetSlaveSelectPolarity,"ax",%progbits
+ 285              		.align	2
+ 286              		.global	MAX7219_SpiSetSlaveSelectPolarity
+ 287              		.code	16
+ 288              		.thumb_func
+ 289              		.type	MAX7219_SpiSetSlaveSelectPolarity, %function
+ 290              	MAX7219_SpiSetSlaveSelectPolarity:
+ 291              	.LFB6:
+ 470:Generated_Source\PSoC4/MAX7219_SPI.c **** #endif /* (MAX7219_SPI_MASTER_CONST) */
+ 471:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 472:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 473:Generated_Source\PSoC4/MAX7219_SPI.c **** #if !(MAX7219_CY_SCBIP_V0 || MAX7219_CY_SCBIP_V1)
+ 474:Generated_Source\PSoC4/MAX7219_SPI.c ****     /*******************************************************************************
+ 475:Generated_Source\PSoC4/MAX7219_SPI.c ****     * Function Name: MAX7219_SpiSetSlaveSelectPolarity
+ 476:Generated_Source\PSoC4/MAX7219_SPI.c ****     ****************************************************************************//**
+ 477:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 478:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  Sets active polarity for slave select line.
+ 479:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  The component should be in one of the following states to change the active
+ 480:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  slave select signal source correctly:
+ 481:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - The component is disabled.
+ 482:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - The component has completed transfer.
+ 483:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  
+ 484:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  This function does not check that these conditions are met.
+ 485:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 486:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  \param slaveSelect: slave select line to change active polarity.
+ 487:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT0 - Slave select 0.
+ 488:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT1 - Slave select 1.
+ 489:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT2 - Slave select 2.
+ 490:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SLAVE_SELECT3 - Slave select 3.
+ 491:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 492:Generated_Source\PSoC4/MAX7219_SPI.c ****     *  \param polarity: active polarity of slave select line.
+ 493:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SS_ACTIVE_LOW  - Slave select is active low.
+ 494:Generated_Source\PSoC4/MAX7219_SPI.c ****     *   - MAX7219_SPI_SS_ACTIVE_HIGH - Slave select is active high.
+ 495:Generated_Source\PSoC4/MAX7219_SPI.c ****     *
+ 496:Generated_Source\PSoC4/MAX7219_SPI.c ****     *******************************************************************************/
+ 497:Generated_Source\PSoC4/MAX7219_SPI.c ****     void MAX7219_SpiSetSlaveSelectPolarity(uint32 slaveSelect, uint32 polarity)
+ 498:Generated_Source\PSoC4/MAX7219_SPI.c ****     {
+ 292              		.loc 1 498 0
+ 293              		.cfi_startproc
+ 294              		@ args = 0, pretend = 0, frame = 16
+ 295              		@ frame_needed = 1, uses_anonymous_args = 0
+ 296 0000 80B5     		push	{r7, lr}
+ 297              		.cfi_def_cfa_offset 8
+ 298              		.cfi_offset 7, -8
+ 299              		.cfi_offset 14, -4
+ 300 0002 84B0     		sub	sp, sp, #16
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 15
+
+
+ 301              		.cfi_def_cfa_offset 24
+ 302 0004 00AF     		add	r7, sp, #0
+ 303              		.cfi_def_cfa_register 7
+ 304 0006 7860     		str	r0, [r7, #4]
+ 305 0008 3960     		str	r1, [r7]
+ 499:Generated_Source\PSoC4/MAX7219_SPI.c ****         uint32 ssPolarity;
+ 500:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 501:Generated_Source\PSoC4/MAX7219_SPI.c ****         /* Get position of the polarity bit associated with slave select line */
+ 502:Generated_Source\PSoC4/MAX7219_SPI.c ****         ssPolarity = MAX7219_GET_SPI_CTRL_SSEL_POLARITY((uint32) 1u << slaveSelect);
+ 306              		.loc 1 502 0
+ 307 000a 0122     		movs	r2, #1
+ 308 000c 7B68     		ldr	r3, [r7, #4]
+ 309 000e 9A40     		lsls	r2, r2, r3
+ 310 0010 1300     		movs	r3, r2
+ 311 0012 1A02     		lsls	r2, r3, #8
+ 312 0014 F023     		movs	r3, #240
+ 313 0016 1B01     		lsls	r3, r3, #4
+ 314 0018 1340     		ands	r3, r2
+ 315 001a FB60     		str	r3, [r7, #12]
+ 503:Generated_Source\PSoC4/MAX7219_SPI.c **** 
+ 504:Generated_Source\PSoC4/MAX7219_SPI.c ****         if (0u != polarity)
+ 316              		.loc 1 504 0
+ 317 001c 3B68     		ldr	r3, [r7]
+ 318 001e 002B     		cmp	r3, #0
+ 319 0020 06D0     		beq	.L14
+ 505:Generated_Source\PSoC4/MAX7219_SPI.c ****         {
+ 506:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_SPI_CTRL_REG |= (uint32)  ssPolarity;
+ 320              		.loc 1 506 0
+ 321 0022 094B     		ldr	r3, .L17
+ 322 0024 084A     		ldr	r2, .L17
+ 323 0026 1168     		ldr	r1, [r2]
+ 324 0028 FA68     		ldr	r2, [r7, #12]
+ 325 002a 0A43     		orrs	r2, r1
+ 326 002c 1A60     		str	r2, [r3]
+ 507:Generated_Source\PSoC4/MAX7219_SPI.c ****         }
+ 508:Generated_Source\PSoC4/MAX7219_SPI.c ****         else
+ 509:Generated_Source\PSoC4/MAX7219_SPI.c ****         {
+ 510:Generated_Source\PSoC4/MAX7219_SPI.c ****             MAX7219_SPI_CTRL_REG &= (uint32) ~ssPolarity;
+ 511:Generated_Source\PSoC4/MAX7219_SPI.c ****         }
+ 512:Generated_Source\PSoC4/MAX7219_SPI.c ****     }
+ 327              		.loc 1 512 0
+ 328 002e 06E0     		b	.L16
+ 329              	.L14:
+ 510:Generated_Source\PSoC4/MAX7219_SPI.c ****         }
+ 330              		.loc 1 510 0
+ 331 0030 054B     		ldr	r3, .L17
+ 332 0032 054A     		ldr	r2, .L17
+ 333 0034 1268     		ldr	r2, [r2]
+ 334 0036 F968     		ldr	r1, [r7, #12]
+ 335 0038 C943     		mvns	r1, r1
+ 336 003a 0A40     		ands	r2, r1
+ 337 003c 1A60     		str	r2, [r3]
+ 338              	.L16:
+ 339              		.loc 1 512 0
+ 340 003e C046     		nop
+ 341 0040 BD46     		mov	sp, r7
+ 342 0042 04B0     		add	sp, sp, #16
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 16
+
+
+ 343              		@ sp needed
+ 344 0044 80BD     		pop	{r7, pc}
+ 345              	.L18:
+ 346 0046 C046     		.align	2
+ 347              	.L17:
+ 348 0048 20002540 		.word	1076166688
+ 349              		.cfi_endproc
+ 350              	.LFE6:
+ 351              		.size	MAX7219_SpiSetSlaveSelectPolarity, .-MAX7219_SpiSetSlaveSelectPolarity
+ 352              		.text
+ 353              	.Letext0:
+ 354              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 355              		.file 3 "Generated_Source\\PSoC4\\MAX7219_PVT.h"
+ 356              		.section	.debug_info,"",%progbits
+ 357              	.Ldebug_info0:
+ 358 0000 6C010000 		.4byte	0x16c
+ 359 0004 0400     		.2byte	0x4
+ 360 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 361 000a 04       		.byte	0x4
+ 362 000b 01       		.uleb128 0x1
+ 363 000c AB000000 		.4byte	.LASF26
+ 364 0010 0C       		.byte	0xc
+ 365 0011 35020000 		.4byte	.LASF27
+ 366 0015 C8010000 		.4byte	.LASF28
+ 367 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 368 001d 00000000 		.4byte	0
+ 369 0021 00000000 		.4byte	.Ldebug_line0
+ 370 0025 02       		.uleb128 0x2
+ 371 0026 01       		.byte	0x1
+ 372 0027 06       		.byte	0x6
+ 373 0028 74020000 		.4byte	.LASF0
+ 374 002c 02       		.uleb128 0x2
+ 375 002d 01       		.byte	0x1
+ 376 002e 08       		.byte	0x8
+ 377 002f 78000000 		.4byte	.LASF1
+ 378 0033 02       		.uleb128 0x2
+ 379 0034 02       		.byte	0x2
+ 380 0035 05       		.byte	0x5
+ 381 0036 2B020000 		.4byte	.LASF2
+ 382 003a 02       		.uleb128 0x2
+ 383 003b 02       		.byte	0x2
+ 384 003c 07       		.byte	0x7
+ 385 003d 98000000 		.4byte	.LASF3
+ 386 0041 02       		.uleb128 0x2
+ 387 0042 04       		.byte	0x4
+ 388 0043 05       		.byte	0x5
+ 389 0044 5A020000 		.4byte	.LASF4
+ 390 0048 02       		.uleb128 0x2
+ 391 0049 04       		.byte	0x4
+ 392 004a 07       		.byte	0x7
+ 393 004b 86000000 		.4byte	.LASF5
+ 394 004f 02       		.uleb128 0x2
+ 395 0050 08       		.byte	0x8
+ 396 0051 05       		.byte	0x5
+ 397 0052 BA010000 		.4byte	.LASF6
+ 398 0056 02       		.uleb128 0x2
+ 399 0057 08       		.byte	0x8
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 17
+
+
+ 400 0058 07       		.byte	0x7
+ 401 0059 91010000 		.4byte	.LASF7
+ 402 005d 03       		.uleb128 0x3
+ 403 005e 04       		.byte	0x4
+ 404 005f 05       		.byte	0x5
+ 405 0060 696E7400 		.ascii	"int\000"
+ 406 0064 02       		.uleb128 0x2
+ 407 0065 04       		.byte	0x4
+ 408 0066 07       		.byte	0x7
+ 409 0067 84010000 		.4byte	.LASF8
+ 410 006b 04       		.uleb128 0x4
+ 411 006c 60010000 		.4byte	.LASF9
+ 412 0070 02       		.byte	0x2
+ 413 0071 E501     		.2byte	0x1e5
+ 414 0073 3A000000 		.4byte	0x3a
+ 415 0077 04       		.uleb128 0x4
+ 416 0078 67010000 		.4byte	.LASF10
+ 417 007c 02       		.byte	0x2
+ 418 007d E601     		.2byte	0x1e6
+ 419 007f 48000000 		.4byte	0x48
+ 420 0083 02       		.uleb128 0x2
+ 421 0084 04       		.byte	0x4
+ 422 0085 04       		.byte	0x4
+ 423 0086 62000000 		.4byte	.LASF11
+ 424 008a 02       		.uleb128 0x2
+ 425 008b 08       		.byte	0x8
+ 426 008c 04       		.byte	0x4
+ 427 008d 39010000 		.4byte	.LASF12
+ 428 0091 02       		.uleb128 0x2
+ 429 0092 01       		.byte	0x1
+ 430 0093 08       		.byte	0x8
+ 431 0094 63020000 		.4byte	.LASF13
+ 432 0098 04       		.uleb128 0x4
+ 433 0099 13000000 		.4byte	.LASF14
+ 434 009d 02       		.byte	0x2
+ 435 009e 9002     		.2byte	0x290
+ 436 00a0 A4000000 		.4byte	0xa4
+ 437 00a4 05       		.uleb128 0x5
+ 438 00a5 77000000 		.4byte	0x77
+ 439 00a9 02       		.uleb128 0x2
+ 440 00aa 08       		.byte	0x8
+ 441 00ab 04       		.byte	0x4
+ 442 00ac 68020000 		.4byte	.LASF15
+ 443 00b0 02       		.uleb128 0x2
+ 444 00b1 04       		.byte	0x4
+ 445 00b2 07       		.byte	0x7
+ 446 00b3 B1010000 		.4byte	.LASF16
+ 447 00b7 06       		.uleb128 0x6
+ 448 00b8 68000000 		.4byte	.LASF17
+ 449 00bc 01       		.byte	0x1
+ 450 00bd AC       		.byte	0xac
+ 451 00be 00000000 		.4byte	.LFB2
+ 452 00c2 A4000000 		.4byte	.LFE2-.LFB2
+ 453 00c6 01       		.uleb128 0x1
+ 454 00c7 9C       		.byte	0x9c
+ 455 00c8 07       		.uleb128 0x7
+ 456 00c9 6E010000 		.4byte	.LASF18
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 18
+
+
+ 457 00cd 01       		.byte	0x1
+ 458 00ce E7       		.byte	0xe7
+ 459 00cf 00000000 		.4byte	.LFB3
+ 460 00d3 2C000000 		.4byte	.LFE3-.LFB3
+ 461 00d7 01       		.uleb128 0x1
+ 462 00d8 9C       		.byte	0x9c
+ 463 00d9 08       		.uleb128 0x8
+ 464 00da 30000000 		.4byte	.LASF19
+ 465 00de 01       		.byte	0x1
+ 466 00df 3C01     		.2byte	0x13c
+ 467 00e1 00000000 		.4byte	.LFB4
+ 468 00e5 50000000 		.4byte	.LFE4-.LFB4
+ 469 00e9 01       		.uleb128 0x1
+ 470 00ea 9C       		.byte	0x9c
+ 471 00eb 09       		.uleb128 0x9
+ 472 00ec 40010000 		.4byte	.LASF20
+ 473 00f0 01       		.byte	0x1
+ 474 00f1 CB01     		.2byte	0x1cb
+ 475 00f3 00000000 		.4byte	.LFB5
+ 476 00f7 3C000000 		.4byte	.LFE5-.LFB5
+ 477 00fb 01       		.uleb128 0x1
+ 478 00fc 9C       		.byte	0x9c
+ 479 00fd 20010000 		.4byte	0x120
+ 480 0101 0A       		.uleb128 0xa
+ 481 0102 19000000 		.4byte	.LASF22
+ 482 0106 01       		.byte	0x1
+ 483 0107 CB01     		.2byte	0x1cb
+ 484 0109 77000000 		.4byte	0x77
+ 485 010d 02       		.uleb128 0x2
+ 486 010e 91       		.byte	0x91
+ 487 010f 6C       		.sleb128 -20
+ 488 0110 0B       		.uleb128 0xb
+ 489 0111 23020000 		.4byte	.LASF24
+ 490 0115 01       		.byte	0x1
+ 491 0116 CD01     		.2byte	0x1cd
+ 492 0118 77000000 		.4byte	0x77
+ 493 011c 02       		.uleb128 0x2
+ 494 011d 91       		.byte	0x91
+ 495 011e 74       		.sleb128 -12
+ 496 011f 00       		.byte	0
+ 497 0120 09       		.uleb128 0x9
+ 498 0121 40000000 		.4byte	.LASF21
+ 499 0125 01       		.byte	0x1
+ 500 0126 F101     		.2byte	0x1f1
+ 501 0128 00000000 		.4byte	.LFB6
+ 502 012c 4C000000 		.4byte	.LFE6-.LFB6
+ 503 0130 01       		.uleb128 0x1
+ 504 0131 9C       		.byte	0x9c
+ 505 0132 64010000 		.4byte	0x164
+ 506 0136 0A       		.uleb128 0xa
+ 507 0137 19000000 		.4byte	.LASF22
+ 508 013b 01       		.byte	0x1
+ 509 013c F101     		.2byte	0x1f1
+ 510 013e 77000000 		.4byte	0x77
+ 511 0142 02       		.uleb128 0x2
+ 512 0143 91       		.byte	0x91
+ 513 0144 6C       		.sleb128 -20
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 19
+
+
+ 514 0145 0A       		.uleb128 0xa
+ 515 0146 A8010000 		.4byte	.LASF23
+ 516 014a 01       		.byte	0x1
+ 517 014b F101     		.2byte	0x1f1
+ 518 014d 77000000 		.4byte	0x77
+ 519 0151 02       		.uleb128 0x2
+ 520 0152 91       		.byte	0x91
+ 521 0153 68       		.sleb128 -24
+ 522 0154 0B       		.uleb128 0xb
+ 523 0155 25000000 		.4byte	.LASF25
+ 524 0159 01       		.byte	0x1
+ 525 015a F301     		.2byte	0x1f3
+ 526 015c 77000000 		.4byte	0x77
+ 527 0160 02       		.uleb128 0x2
+ 528 0161 91       		.byte	0x91
+ 529 0162 74       		.sleb128 -12
+ 530 0163 00       		.byte	0
+ 531 0164 0C       		.uleb128 0xc
+ 532 0165 00000000 		.4byte	.LASF29
+ 533 0169 03       		.byte	0x3
+ 534 016a 5B       		.byte	0x5b
+ 535 016b 6B000000 		.4byte	0x6b
+ 536 016f 00       		.byte	0
+ 537              		.section	.debug_abbrev,"",%progbits
+ 538              	.Ldebug_abbrev0:
+ 539 0000 01       		.uleb128 0x1
+ 540 0001 11       		.uleb128 0x11
+ 541 0002 01       		.byte	0x1
+ 542 0003 25       		.uleb128 0x25
+ 543 0004 0E       		.uleb128 0xe
+ 544 0005 13       		.uleb128 0x13
+ 545 0006 0B       		.uleb128 0xb
+ 546 0007 03       		.uleb128 0x3
+ 547 0008 0E       		.uleb128 0xe
+ 548 0009 1B       		.uleb128 0x1b
+ 549 000a 0E       		.uleb128 0xe
+ 550 000b 55       		.uleb128 0x55
+ 551 000c 17       		.uleb128 0x17
+ 552 000d 11       		.uleb128 0x11
+ 553 000e 01       		.uleb128 0x1
+ 554 000f 10       		.uleb128 0x10
+ 555 0010 17       		.uleb128 0x17
+ 556 0011 00       		.byte	0
+ 557 0012 00       		.byte	0
+ 558 0013 02       		.uleb128 0x2
+ 559 0014 24       		.uleb128 0x24
+ 560 0015 00       		.byte	0
+ 561 0016 0B       		.uleb128 0xb
+ 562 0017 0B       		.uleb128 0xb
+ 563 0018 3E       		.uleb128 0x3e
+ 564 0019 0B       		.uleb128 0xb
+ 565 001a 03       		.uleb128 0x3
+ 566 001b 0E       		.uleb128 0xe
+ 567 001c 00       		.byte	0
+ 568 001d 00       		.byte	0
+ 569 001e 03       		.uleb128 0x3
+ 570 001f 24       		.uleb128 0x24
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 20
+
+
+ 571 0020 00       		.byte	0
+ 572 0021 0B       		.uleb128 0xb
+ 573 0022 0B       		.uleb128 0xb
+ 574 0023 3E       		.uleb128 0x3e
+ 575 0024 0B       		.uleb128 0xb
+ 576 0025 03       		.uleb128 0x3
+ 577 0026 08       		.uleb128 0x8
+ 578 0027 00       		.byte	0
+ 579 0028 00       		.byte	0
+ 580 0029 04       		.uleb128 0x4
+ 581 002a 16       		.uleb128 0x16
+ 582 002b 00       		.byte	0
+ 583 002c 03       		.uleb128 0x3
+ 584 002d 0E       		.uleb128 0xe
+ 585 002e 3A       		.uleb128 0x3a
+ 586 002f 0B       		.uleb128 0xb
+ 587 0030 3B       		.uleb128 0x3b
+ 588 0031 05       		.uleb128 0x5
+ 589 0032 49       		.uleb128 0x49
+ 590 0033 13       		.uleb128 0x13
+ 591 0034 00       		.byte	0
+ 592 0035 00       		.byte	0
+ 593 0036 05       		.uleb128 0x5
+ 594 0037 35       		.uleb128 0x35
+ 595 0038 00       		.byte	0
+ 596 0039 49       		.uleb128 0x49
+ 597 003a 13       		.uleb128 0x13
+ 598 003b 00       		.byte	0
+ 599 003c 00       		.byte	0
+ 600 003d 06       		.uleb128 0x6
+ 601 003e 2E       		.uleb128 0x2e
+ 602 003f 00       		.byte	0
+ 603 0040 3F       		.uleb128 0x3f
+ 604 0041 19       		.uleb128 0x19
+ 605 0042 03       		.uleb128 0x3
+ 606 0043 0E       		.uleb128 0xe
+ 607 0044 3A       		.uleb128 0x3a
+ 608 0045 0B       		.uleb128 0xb
+ 609 0046 3B       		.uleb128 0x3b
+ 610 0047 0B       		.uleb128 0xb
+ 611 0048 27       		.uleb128 0x27
+ 612 0049 19       		.uleb128 0x19
+ 613 004a 11       		.uleb128 0x11
+ 614 004b 01       		.uleb128 0x1
+ 615 004c 12       		.uleb128 0x12
+ 616 004d 06       		.uleb128 0x6
+ 617 004e 40       		.uleb128 0x40
+ 618 004f 18       		.uleb128 0x18
+ 619 0050 9642     		.uleb128 0x2116
+ 620 0052 19       		.uleb128 0x19
+ 621 0053 00       		.byte	0
+ 622 0054 00       		.byte	0
+ 623 0055 07       		.uleb128 0x7
+ 624 0056 2E       		.uleb128 0x2e
+ 625 0057 00       		.byte	0
+ 626 0058 3F       		.uleb128 0x3f
+ 627 0059 19       		.uleb128 0x19
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 21
+
+
+ 628 005a 03       		.uleb128 0x3
+ 629 005b 0E       		.uleb128 0xe
+ 630 005c 3A       		.uleb128 0x3a
+ 631 005d 0B       		.uleb128 0xb
+ 632 005e 3B       		.uleb128 0x3b
+ 633 005f 0B       		.uleb128 0xb
+ 634 0060 27       		.uleb128 0x27
+ 635 0061 19       		.uleb128 0x19
+ 636 0062 11       		.uleb128 0x11
+ 637 0063 01       		.uleb128 0x1
+ 638 0064 12       		.uleb128 0x12
+ 639 0065 06       		.uleb128 0x6
+ 640 0066 40       		.uleb128 0x40
+ 641 0067 18       		.uleb128 0x18
+ 642 0068 9742     		.uleb128 0x2117
+ 643 006a 19       		.uleb128 0x19
+ 644 006b 00       		.byte	0
+ 645 006c 00       		.byte	0
+ 646 006d 08       		.uleb128 0x8
+ 647 006e 2E       		.uleb128 0x2e
+ 648 006f 00       		.byte	0
+ 649 0070 3F       		.uleb128 0x3f
+ 650 0071 19       		.uleb128 0x19
+ 651 0072 03       		.uleb128 0x3
+ 652 0073 0E       		.uleb128 0xe
+ 653 0074 3A       		.uleb128 0x3a
+ 654 0075 0B       		.uleb128 0xb
+ 655 0076 3B       		.uleb128 0x3b
+ 656 0077 05       		.uleb128 0x5
+ 657 0078 27       		.uleb128 0x27
+ 658 0079 19       		.uleb128 0x19
+ 659 007a 11       		.uleb128 0x11
+ 660 007b 01       		.uleb128 0x1
+ 661 007c 12       		.uleb128 0x12
+ 662 007d 06       		.uleb128 0x6
+ 663 007e 40       		.uleb128 0x40
+ 664 007f 18       		.uleb128 0x18
+ 665 0080 9642     		.uleb128 0x2116
+ 666 0082 19       		.uleb128 0x19
+ 667 0083 00       		.byte	0
+ 668 0084 00       		.byte	0
+ 669 0085 09       		.uleb128 0x9
+ 670 0086 2E       		.uleb128 0x2e
+ 671 0087 01       		.byte	0x1
+ 672 0088 3F       		.uleb128 0x3f
+ 673 0089 19       		.uleb128 0x19
+ 674 008a 03       		.uleb128 0x3
+ 675 008b 0E       		.uleb128 0xe
+ 676 008c 3A       		.uleb128 0x3a
+ 677 008d 0B       		.uleb128 0xb
+ 678 008e 3B       		.uleb128 0x3b
+ 679 008f 05       		.uleb128 0x5
+ 680 0090 27       		.uleb128 0x27
+ 681 0091 19       		.uleb128 0x19
+ 682 0092 11       		.uleb128 0x11
+ 683 0093 01       		.uleb128 0x1
+ 684 0094 12       		.uleb128 0x12
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 22
+
+
+ 685 0095 06       		.uleb128 0x6
+ 686 0096 40       		.uleb128 0x40
+ 687 0097 18       		.uleb128 0x18
+ 688 0098 9742     		.uleb128 0x2117
+ 689 009a 19       		.uleb128 0x19
+ 690 009b 01       		.uleb128 0x1
+ 691 009c 13       		.uleb128 0x13
+ 692 009d 00       		.byte	0
+ 693 009e 00       		.byte	0
+ 694 009f 0A       		.uleb128 0xa
+ 695 00a0 05       		.uleb128 0x5
+ 696 00a1 00       		.byte	0
+ 697 00a2 03       		.uleb128 0x3
+ 698 00a3 0E       		.uleb128 0xe
+ 699 00a4 3A       		.uleb128 0x3a
+ 700 00a5 0B       		.uleb128 0xb
+ 701 00a6 3B       		.uleb128 0x3b
+ 702 00a7 05       		.uleb128 0x5
+ 703 00a8 49       		.uleb128 0x49
+ 704 00a9 13       		.uleb128 0x13
+ 705 00aa 02       		.uleb128 0x2
+ 706 00ab 18       		.uleb128 0x18
+ 707 00ac 00       		.byte	0
+ 708 00ad 00       		.byte	0
+ 709 00ae 0B       		.uleb128 0xb
+ 710 00af 34       		.uleb128 0x34
+ 711 00b0 00       		.byte	0
+ 712 00b1 03       		.uleb128 0x3
+ 713 00b2 0E       		.uleb128 0xe
+ 714 00b3 3A       		.uleb128 0x3a
+ 715 00b4 0B       		.uleb128 0xb
+ 716 00b5 3B       		.uleb128 0x3b
+ 717 00b6 05       		.uleb128 0x5
+ 718 00b7 49       		.uleb128 0x49
+ 719 00b8 13       		.uleb128 0x13
+ 720 00b9 02       		.uleb128 0x2
+ 721 00ba 18       		.uleb128 0x18
+ 722 00bb 00       		.byte	0
+ 723 00bc 00       		.byte	0
+ 724 00bd 0C       		.uleb128 0xc
+ 725 00be 34       		.uleb128 0x34
+ 726 00bf 00       		.byte	0
+ 727 00c0 03       		.uleb128 0x3
+ 728 00c1 0E       		.uleb128 0xe
+ 729 00c2 3A       		.uleb128 0x3a
+ 730 00c3 0B       		.uleb128 0xb
+ 731 00c4 3B       		.uleb128 0x3b
+ 732 00c5 0B       		.uleb128 0xb
+ 733 00c6 49       		.uleb128 0x49
+ 734 00c7 13       		.uleb128 0x13
+ 735 00c8 3F       		.uleb128 0x3f
+ 736 00c9 19       		.uleb128 0x19
+ 737 00ca 3C       		.uleb128 0x3c
+ 738 00cb 19       		.uleb128 0x19
+ 739 00cc 00       		.byte	0
+ 740 00cd 00       		.byte	0
+ 741 00ce 00       		.byte	0
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 23
+
+
+ 742              		.section	.debug_aranges,"",%progbits
+ 743 0000 3C000000 		.4byte	0x3c
+ 744 0004 0200     		.2byte	0x2
+ 745 0006 00000000 		.4byte	.Ldebug_info0
+ 746 000a 04       		.byte	0x4
+ 747 000b 00       		.byte	0
+ 748 000c 0000     		.2byte	0
+ 749 000e 0000     		.2byte	0
+ 750 0010 00000000 		.4byte	.LFB2
+ 751 0014 A4000000 		.4byte	.LFE2-.LFB2
+ 752 0018 00000000 		.4byte	.LFB3
+ 753 001c 2C000000 		.4byte	.LFE3-.LFB3
+ 754 0020 00000000 		.4byte	.LFB4
+ 755 0024 50000000 		.4byte	.LFE4-.LFB4
+ 756 0028 00000000 		.4byte	.LFB5
+ 757 002c 3C000000 		.4byte	.LFE5-.LFB5
+ 758 0030 00000000 		.4byte	.LFB6
+ 759 0034 4C000000 		.4byte	.LFE6-.LFB6
+ 760 0038 00000000 		.4byte	0
+ 761 003c 00000000 		.4byte	0
+ 762              		.section	.debug_ranges,"",%progbits
+ 763              	.Ldebug_ranges0:
+ 764 0000 00000000 		.4byte	.LFB2
+ 765 0004 A4000000 		.4byte	.LFE2
+ 766 0008 00000000 		.4byte	.LFB3
+ 767 000c 2C000000 		.4byte	.LFE3
+ 768 0010 00000000 		.4byte	.LFB4
+ 769 0014 50000000 		.4byte	.LFE4
+ 770 0018 00000000 		.4byte	.LFB5
+ 771 001c 3C000000 		.4byte	.LFE5
+ 772 0020 00000000 		.4byte	.LFB6
+ 773 0024 4C000000 		.4byte	.LFE6
+ 774 0028 00000000 		.4byte	0
+ 775 002c 00000000 		.4byte	0
+ 776              		.section	.debug_line,"",%progbits
+ 777              	.Ldebug_line0:
+ 778 0000 DC000000 		.section	.debug_str,"MS",%progbits,1
+ 778      02005900 
+ 778      00000201 
+ 778      FB0E0D00 
+ 778      01010101 
+ 779              	.LASF29:
+ 780 0000 4D415837 		.ascii	"MAX7219_IntrTxMask\000"
+ 780      3231395F 
+ 780      496E7472 
+ 780      54784D61 
+ 780      736B00
+ 781              	.LASF14:
+ 782 0013 72656733 		.ascii	"reg32\000"
+ 782      3200
+ 783              	.LASF22:
+ 784 0019 736C6176 		.ascii	"slaveSelect\000"
+ 784      6553656C 
+ 784      65637400 
+ 785              	.LASF25:
+ 786 0025 7373506F 		.ascii	"ssPolarity\000"
+ 786      6C617269 
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 24
+
+
+ 786      747900
+ 787              	.LASF19:
+ 788 0030 4D415837 		.ascii	"MAX7219_SpiStop\000"
+ 788      3231395F 
+ 788      53706953 
+ 788      746F7000 
+ 789              	.LASF21:
+ 790 0040 4D415837 		.ascii	"MAX7219_SpiSetSlaveSelectPolarity\000"
+ 790      3231395F 
+ 790      53706953 
+ 790      6574536C 
+ 790      61766553 
+ 791              	.LASF11:
+ 792 0062 666C6F61 		.ascii	"float\000"
+ 792      7400
+ 793              	.LASF17:
+ 794 0068 4D415837 		.ascii	"MAX7219_SpiInit\000"
+ 794      3231395F 
+ 794      53706949 
+ 794      6E697400 
+ 795              	.LASF1:
+ 796 0078 756E7369 		.ascii	"unsigned char\000"
+ 796      676E6564 
+ 796      20636861 
+ 796      7200
+ 797              	.LASF5:
+ 798 0086 6C6F6E67 		.ascii	"long unsigned int\000"
+ 798      20756E73 
+ 798      69676E65 
+ 798      6420696E 
+ 798      7400
+ 799              	.LASF3:
+ 800 0098 73686F72 		.ascii	"short unsigned int\000"
+ 800      7420756E 
+ 800      7369676E 
+ 800      65642069 
+ 800      6E7400
+ 801              	.LASF26:
+ 802 00ab 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 802      43313120 
+ 802      352E342E 
+ 802      31203230 
+ 802      31363036 
+ 803 00de 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 803      20726576 
+ 803      6973696F 
+ 803      6E203233 
+ 803      37373135 
+ 804 0111 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 804      66756E63 
+ 804      74696F6E 
+ 804      2D736563 
+ 804      74696F6E 
+ 805              	.LASF12:
+ 806 0139 646F7562 		.ascii	"double\000"
+ 806      6C6500
+ 807              	.LASF20:
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 25
+
+
+ 808 0140 4D415837 		.ascii	"MAX7219_SpiSetActiveSlaveSelect\000"
+ 808      3231395F 
+ 808      53706953 
+ 808      65744163 
+ 808      74697665 
+ 809              	.LASF9:
+ 810 0160 75696E74 		.ascii	"uint16\000"
+ 810      313600
+ 811              	.LASF10:
+ 812 0167 75696E74 		.ascii	"uint32\000"
+ 812      333200
+ 813              	.LASF18:
+ 814 016e 4D415837 		.ascii	"MAX7219_SpiPostEnable\000"
+ 814      3231395F 
+ 814      53706950 
+ 814      6F737445 
+ 814      6E61626C 
+ 815              	.LASF8:
+ 816 0184 756E7369 		.ascii	"unsigned int\000"
+ 816      676E6564 
+ 816      20696E74 
+ 816      00
+ 817              	.LASF7:
+ 818 0191 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 818      206C6F6E 
+ 818      6720756E 
+ 818      7369676E 
+ 818      65642069 
+ 819              	.LASF23:
+ 820 01a8 706F6C61 		.ascii	"polarity\000"
+ 820      72697479 
+ 820      00
+ 821              	.LASF16:
+ 822 01b1 73697A65 		.ascii	"sizetype\000"
+ 822      74797065 
+ 822      00
+ 823              	.LASF6:
+ 824 01ba 6C6F6E67 		.ascii	"long long int\000"
+ 824      206C6F6E 
+ 824      6720696E 
+ 824      7400
+ 825              	.LASF28:
+ 826 01c8 443A5C44 		.ascii	"D:\\Dropbox (School)\\Manhattan\\Embedded Systems\\"
+ 826      726F7062 
+ 826      6F782028 
+ 826      5363686F 
+ 826      6F6C295C 
+ 827 01f7 50726F6A 		.ascii	"Project\\CySmartDisplay\\CySmartDisplay.cydsn\000"
+ 827      6563745C 
+ 827      4379536D 
+ 827      61727444 
+ 827      6973706C 
+ 828              	.LASF24:
+ 829 0223 73706943 		.ascii	"spiCtrl\000"
+ 829      74726C00 
+ 830              	.LASF2:
+ 831 022b 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\crazy\AppData\Local\Temp\ccPqe1eR.s 			page 26
+
+
+ 831      7420696E 
+ 831      7400
+ 832              	.LASF27:
+ 833 0235 47656E65 		.ascii	"Generated_Source\\PSoC4\\MAX7219_SPI.c\000"
+ 833      72617465 
+ 833      645F536F 
+ 833      75726365 
+ 833      5C50536F 
+ 834              	.LASF4:
+ 835 025a 6C6F6E67 		.ascii	"long int\000"
+ 835      20696E74 
+ 835      00
+ 836              	.LASF13:
+ 837 0263 63686172 		.ascii	"char\000"
+ 837      00
+ 838              	.LASF15:
+ 839 0268 6C6F6E67 		.ascii	"long double\000"
+ 839      20646F75 
+ 839      626C6500 
+ 840              	.LASF0:
+ 841 0274 7369676E 		.ascii	"signed char\000"
+ 841      65642063 
+ 841      68617200 
+ 842              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
