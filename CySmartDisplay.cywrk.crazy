@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CySmartDisplay\CySmartDisplay\Source Files\StandardDisplay.c">
+<ExpandedNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Pins</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Analog</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Clocks</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Interrupts</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\System</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Directives</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Flash Security</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files\font.h</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files\main.h</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\EventHandler.c</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\main.c</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\StandardDisplay.c</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\Disp_INT</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\MAX7219</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Pins</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Analog</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Clocks</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Interrupts</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\System</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Directives</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.cydwr\Flash Security</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files\font.h</v>
+<v>CySmartDisplay\CySmartDisplay\Header Files\main.h</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\EventHandler.c</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\main.c</v>
+<v>CySmartDisplay\CySmartDisplay\Source Files\StandardDisplay.c</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\BLE</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\BLUE_LED</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\CS</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\cy_boot</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\cy_lfclk</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\Disp_INT</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\Disp_INT\Disp_INT.c</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\Disp_INT\Disp_INT.h</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\DisplayTimer</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\GREEN_LED</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\MAX7219</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\MAX7219\MAX7219.c</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\MAX7219\MAX7219.h</v>
+<v>CySmartDisplay\CySmartDisplay\Generated_Source\PSoC4\MAX7219\MAX7219_BOOT.c</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign</v>
+<v>CySmartDisplay\CySmartDisplay\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_LED.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_LED_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CS.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CS_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\Disp_INT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\DisplayTimer.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\DisplayTimer_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\EventHandler.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_LED.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_LED_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_BOOT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_miso_m.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_miso_m_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_mosi_m.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_mosi_m_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_SCBCLK.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_sclk_m.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_sclk_m_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_SPI.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_SPI_BOOT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_SPI_UART.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\RED_LED.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\RED_LED_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\StandardDisplay.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_CLK.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\CySmartDisplay.elf</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\CySmartDisplay.hex</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\CySmartDisplay.map</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.gpdsc</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay.rpt</v>
+<v>CySmartDisplay\CySmartDisplay\CySmartDisplay_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_LED.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_LED_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CS.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CS_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\Disp_INT.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\DisplayTimer.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\DisplayTimer_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\EventHandler.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_LED.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_LED_PM.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219.lst</v>
+<v>CySmartDisplay\CySmartDisplay\CortexM0\ARM_GCC_541\Debug\Listing Files\MAX7219_BOOT.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\PSoC 4 Architecture TRM</v>
+<v>CySmartDisplay\CySmartDisplay\PSoC 4200 BLE Family Datasheet</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides\cy_boot_v5_80</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides\cy_lfclk_v1_20</v>
+<v>CySmartDisplay\CySmartDisplay\BLE_v3_63.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_clock_v2_20.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_isr_v1_70.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_pins_v2_20</v>
+<v>CySmartDisplay\CySmartDisplay\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\LED_v1_0</v>
+<v>CySmartDisplay\CySmartDisplay\LED_v1_0\LED_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\Power_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\Resistor_v1_0</v>
+<v>CySmartDisplay\CySmartDisplay\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\SCB_P4_v4_0</v>
+<v>CySmartDisplay\CySmartDisplay\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\TCPWM_P4_v2_10.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay</v>
+<v>CySmartDisplay\CySmartDisplay\PSoC 4 Architecture TRM</v>
+<v>CySmartDisplay\CySmartDisplay\PSoC 4200 BLE Family Datasheet</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides\cy_boot_v5_80</v>
+<v>CySmartDisplay\CySmartDisplay\System Reference Guides\cy_lfclk_v1_20</v>
+<v>CySmartDisplay\CySmartDisplay\BLE_v3_63.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_clock_v2_20.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_isr_v1_70.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\cy_pins_v2_20</v>
+<v>CySmartDisplay\CySmartDisplay\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\LED_v1_0</v>
+<v>CySmartDisplay\CySmartDisplay\LED_v1_0\LED_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\Power_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\Resistor_v1_0</v>
+<v>CySmartDisplay\CySmartDisplay\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\SCB_P4_v4_0</v>
+<v>CySmartDisplay\CySmartDisplay\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>CySmartDisplay\CySmartDisplay\TCPWM_P4_v2_10.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\CySmartDisplay.cydsn\main.c" />
+<name v=".\CySmartDisplay.cydsn\StandardDisplay.c" />
+<name v=".\CySmartDisplay.cydsn\main.h" />
+<name v=".\CySmartDisplay.cydsn\Generated_Source\PSoC4\MAX7219.c" />
+<name v=".\CySmartDisplay.cydsn\Generated_Source\PSoC4\Disp_INT.c" />
+<name v=".\CySmartDisplay.cydsn\Generated_Source\PSoC4\Disp_INT.h" />
+<name v=".\CySmartDisplay.cydsn\font.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="717, 495" SelectedTabbedMdiWindow="dc1a29e8-0f65-4f30-95a4-a78fde33a14b"><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\main.c" Guid="2f538160-d41c-46a4-b054-e476cb29167e" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\StandardDisplay.c" Guid="c3343f22-9fca-4003-a642-8dbee927a8e7" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\main.h" Guid="ae874d0e-5c74-42ca-9a1e-10d196df5b59" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\Generated_Source\PSoC4\MAX7219.c" Guid="d10e3ff1-65e5-4890-a898-b7638fd54c16" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\Generated_Source\PSoC4\Disp_INT.c" Guid="ac35c393-8572-4315-b6ba-8387db330e03" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\Generated_Source\PSoC4\Disp_INT.h" Guid="3d50217c-dfbe-44d5-9836-3f9cea27f83c" /><DocumentWindow Key="D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\font.h" Guid="dc1a29e8-0f65-4f30-95a4-a78fde33a14b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6883d09c-8d6c-45e9-a3ad-56b8aca739d4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
