@@ -1,0 +1,6 @@
+D:\Dropbox (School)\Manhattan\Embedded Systems\Project\CySmartDisplay\CySmartDisplay.cydsn\CySmartDisplay.cyprj|99c2cd81-e974-43e4-bd69-6b05eb92b8b1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4317d655-14e0-4a29-88f5-a67acf841a18
+C:\Users\crazy\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|aa616b22-5be7-4fa9-9ba9-34c84632054e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3944df48-b39e-40df-b61c-0123c9ef80ae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|83a57a05-805f-43ee-ac09-8fc943ecdb47
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|de6ed876-8a43-4cb4-951e-f650b5feb147
