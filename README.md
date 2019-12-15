@@ -6,4 +6,4 @@ BLE Billboard Project<br>
 
 Based on Project 37 in "100 Projects in 100 Days" by Cypress.
 
-<p>Our project entailed coding for a BLE Billboard and then getting a message to show up on the billboard. To get the message on the billboard the user will have to input it on a program using a mobile phone.</p>
+<p>Our project entailed coding for a BLE Billboard and then getting a message to show up on the billboard. To get the message on the billboard the user will have to input it on the Cyprus App using a mobile phone.</p>
